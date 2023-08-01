@@ -1,0 +1,90 @@
+body {
+    background-color: var(--black);
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    min-height: 365px;
+    width: 550px;
+    background-color: var(--gray);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card .id {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: var(--green);
+    animation: show .7s alternate;
+}
+
+.card .quote {
+    position: relative;
+    padding: 30px 0;
+    font-size: 28px;
+    animation: show .6s alternate;
+}
+
+@keyframes show {
+    0% {
+        translate: 20px;
+        opacity: 0;
+    }
+
+    50% {
+        translate: -5px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card .quote::after {
+    content: "";
+    height: 20px;
+    width: 445px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../images/pattern-divider-desktop.svg");
+    background-repeat: no-repeat;
+}
+
+.card .icon {
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    bottom: -32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.card .icon .dice {
+    transition: all .7s ease-in-out;
+}
+
+.card .icon:hover {
+    box-shadow: 0 0 15px var(--green);
+}
+
+.card .icon:hover .dice {
+    transform: rotate(270deg) scale(1.2);
+}

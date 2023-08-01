@@ -1,0 +1,33 @@
+@media screen and (max-width: 562px) {
+    .card {
+        width: 90%;
+        padding-bottom: 120px;
+    }
+
+    .card .quote {
+        font-size: 26px;
+    }
+
+    .card .quote::after {
+        width: 300px;
+        background-image: url("../images/pattern-divider-mobile.svg");
+    }
+
+    .card .icon {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        padding-bottom: 30px;
+    }
+
+    .card .quote {
+        font-size: 24px;
+    }
+
+    .card .quote::after {
+        display: none;
+    }
+}
