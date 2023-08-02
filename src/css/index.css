@@ -53,6 +53,7 @@ body {
 }
 
 .card .quote::after {
+    visibility: visible;
     content: "";
     height: 20px;
     width: 445px;
@@ -62,6 +63,10 @@ body {
     transform: translateX(-50%);
     background-image: url("../images/pattern-divider-desktop.svg");
     background-repeat: no-repeat;
+}
+
+.card .quote.big::after {
+    visibility: hidden;
 }
 
 .card .icon {
@@ -74,17 +79,26 @@ body {
     bottom: -32px;
     border-radius: 50%;
     cursor: pointer;
-    transition: all .4s ease-in-out;
-}
-
-.card .icon .dice {
-    transition: all .7s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .card .icon:hover {
     box-shadow: 0 0 15px var(--green);
 }
 
-.card .icon:hover .dice {
-    transform: rotate(270deg) scale(1.2);
+.card .icon .dice.roll {
+    animation: roll 0.4s forwards 0.1s;
+
+}
+
+@keyframes roll {
+
+    from {
+        transform: rotate(0deg) scale(0.9);
+
+    }
+
+    to {
+        transform: rotate(270deg) scale(1.04);
+    }
 }
