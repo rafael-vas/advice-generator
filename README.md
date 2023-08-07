@@ -22,7 +22,7 @@ Na página do projeto, você encontrará um dado. Clique no ícone para gerar um
 ## Link
 
 ```
-https://rafael-vas.github.io/advice-generator-app/
+https://rafael-vas.github.io/advice-generator/
 ```
 
 ## Screenshot
